@@ -1,1 +1,12 @@
-Answers to the text questions go here.
+1) d)
+One limitation Flesch-Kincaid (FK) score has is that it relies on syllable counts optimised for standard American English pronunciation. It becomes unreliable for :
+- Text with non-native English structures
+- Dialects with different phonetic rules
+The syllable-counting heuristic often misjudges such cases which may skew the estimates.
+
+Another limitation is that Fk measures syntactic complexity (word/sentence length) but ignores semantic difficulty:
+- Technical papers with concise sentences but complex concepts may score low
+- Poetry or lyrics with intentional syntactic complexity may score high despite being conceptually simple
+The formula cannot account for domain-specific terminology or abract ideas that affect real comprehension diffculty.
+
+FK score works best for standardized English with predictable vocabulary and linear syntax, not for non-conventional texts.

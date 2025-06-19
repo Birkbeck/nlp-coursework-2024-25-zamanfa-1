@@ -20,6 +20,6 @@ In my function, I used:
 - Punctuation and digit filtering to remove non-informative characters like "1234", ",", ".", etc.
 - Length filtering which discards short words (in my case 2 or fewer characters) to reduce noise.
 
-This custom tokenizer leads to a cleaner, more informative feature space for classification.
+This custom tokenizer leads to a cleaner, more informative feature space for classification, especially when it is combined with TF-IDF vectorization and bigram inclusion.
 
 The macro F1 scores from the different models show a clear performance improvement when using the custom tokenizer compared to the default tokenizer and n-gram approach. Overall, all models improved in balance and consistency with the lowest macro F1 score being 0.405 from Naive Bayes, likely due to its assumption of feature independence, which does not hold well with bigrams or complex token interactions. This is still significantly greater then the macro F1 score calculated in part d for SVM with a score of 0.219. The MLP Classifier achieved the best performance with a macro F1 score of 0.672, showing strong performance across major and minor parties. This demonstrates that preprocessing data, especially with domain-aware tokenization, can signifiantly improve classification quality even with a limited feature set of 3000 features.

@@ -20,6 +20,9 @@ In my function, I used:
 - Punctuation and digit filtering to remove non-informative characters like "1234", ",", ".", etc.
 - Length filtering which discards short words (in my case 2 or fewer characters) to reduce noise.
 
-This custom tokenizer leads to a cleaner, more informative feature space for classification, especially when it is combined with TF-IDF vectorization and bigram inclusion.
+The custom tokenizer was used with a TfidfVectorizer (using unigrams and bigrams, max_features=3000) to train the same two classifiers used in earlier parts. The macro F1 score I managed to achieve was 0.4798 for RandomForest and 0.5751 for SVM. 
 
-The macro F1 scores from the different models show a clear performance improvement when using the custom tokenizer compared to the default tokenizer and n-gram approach. Overall, all models improved in balance and consistency with the lowest macro F1 score being 0.405 from Naive Bayes, likely due to its assumption of feature independence, which does not hold well with bigrams or complex token interactions. This is still significantly greater then the macro F1 score calculated in part d for SVM with a score of 0.219. The MLP Classifier achieved the best performance with a macro F1 score of 0.672, showing strong performance across major and minor parties. This demonstrates that preprocessing data, especially with domain-aware tokenization, can signifiantly improve classification quality even with a limited feature set of 3000 features.
+RandomForest achieved its best result using my custom tokenizer, showing that the tokenizer helped clean up noise and improve signal.
+SVM scored slightly lower than in part (c) but the custom tokenizer still achieved a competitive performance, much better than the drop in part (d) due to overfitting with the trigrams.
+
+In conclusion, the custom tokenizer proved effective in balancing classification performance with linguistic efficiency. It improved the model robustness by reducing noise and dimensionality and it preserved key patterns by focusing on lemmas and informative tokens.

@@ -1,5 +1,5 @@
 1) d)
-One limitation Flesch-Kincaid (FK) score has is that it relies on syllable counts optimised for standard American English pronunciation. It becomes unreliable for :
+One limitation Flesch-Kincaid (FK) score has is that it relies on syllable counts optimised for standard American English pronunciation. It becomes unreliable for:
 - Text with non-native English structures
 - Dialects with different phonetic rules
 The syllable-counting heuristic often misjudges such cases which may skew the estimates.
